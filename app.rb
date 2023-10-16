@@ -29,6 +29,18 @@ get '/roadmaps/new' do
 	redirect to "roadmaps/#{roadmap.id}"
 end
 
+get '/roadmaps/edit/:id' do
+	@roadmap = Roadmap.find params[:id]
+	erb :roadmap_edit
+end
+
+post '/roadmaps/update/:id' do
+	title = params[:title]
+	roadmap = Roadmap.find params[:id]
+	roadmap.update title: title
+	redirect to "/roadmaps/#{roadmap.id}"
+end
+
 get '/roadmaps/:id' do
 	@roadmap = Roadmap.find params[:id]
 	@cycles = @roadmap.cycles

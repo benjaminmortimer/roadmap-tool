@@ -1,6 +1,14 @@
-<h1 class="roadmap-title">
+<div  class="roadmap-title-container">
+
+<h1>
 	<%= @roadmap.title %>
 </h1>
+
+<p>
+	<a href="/roadmaps/edit/<%= @roadmap.id %>">Rename</a>
+</p>
+
+</div>
 
 <% @roadmap.cycles.each do |cycle| %>
 
