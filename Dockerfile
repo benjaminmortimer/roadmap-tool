@@ -6,9 +6,10 @@ WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
-RUN bundle exec rake db:migrate
 
 COPY . .
+
+RUN bundle exec rake db:migrate
 
 CMD ["ruby", "./app.rb"]
 
