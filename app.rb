@@ -8,6 +8,9 @@ require './models/roadmap.rb'
 
 set :database, {adapter: "sqlite3", database: "app.sqlite3"}
 
+port = ENV["PORT"] || "8080"
+set :port, port
+
 get '/' do
 	erb :index
 end
