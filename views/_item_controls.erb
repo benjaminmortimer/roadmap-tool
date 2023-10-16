@@ -1,0 +1,13 @@
+<div class="item-controls">
+	<ul>
+		<% @cycles.each do |cycle| %>
+			<% unless cycle.id == item.cycle_id %>
+			<li>
+				<a href="<%= "/items/move/#{item.id}?destination=#{cycle.id}" %>">
+				Move to <%= cycle.title %>
+				</a>
+			</li>
+			<% end %>
+		<% end %>
+	</ul>
+</div>

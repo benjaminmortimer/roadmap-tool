@@ -1,0 +1,9 @@
+<h1 class="roadmap-title">
+	<%= @roadmap.title %>
+</h1>
+
+<% @roadmap.cycles.each do |cycle| %>
+
+<%= erb :_cycle, locals: {cycle: cycle} %>
+
+<% end %>

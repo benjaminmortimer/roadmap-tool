@@ -1,0 +1,15 @@
+<input type="hidden" name="cycle_id" value="<%= item.cycle_id %>">
+<input type="hidden" name="roadmap_id" value="<%= item.roadmap_id %>">
+<div class="form-group">
+	<label for="title">Title</label>
+	<input type="text" name="title" id="title" value="<%= item.title%>">
+</div>
+<div class="form-group">
+	<label for="important">Important</label>
+	<input type="text" name="important" id="important" value="<%= item.important %>">
+</div>
+<div class="form-group-textarea">
+	<label for="description">Description</label>
+	<textarea name="description" id="description"><%= item.description %></textarea>
+</div>
+<input type="submit" value="Save">

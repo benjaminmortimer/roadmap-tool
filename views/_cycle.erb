@@ -1,0 +1,12 @@
+<div class="cycle" id="<%= cycle.anchor %>">
+	<h2 class="cycle-title">
+		<%= cycle.title %>
+	</h2>
+	<% cycle.items.each do |item| %>
+		<%= erb :_item, locals: {item: item} %>
+	<% end %>
+	</div>
+	<a href="/items/new<%= "?roadmap_id=#{@roadmap.id}&cycle_id=#{cycle.id}" %>">
+Add something
+	</a>
+</div>

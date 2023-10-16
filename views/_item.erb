@@ -1,0 +1,11 @@
+<div class="item">
+	<h3 class="item-title">
+		<a href="/items/<%= item.id %>">
+			<%= item.title %>
+		</a>
+	</h3>
+	<div>
+		<%= item.important %>
+	</div>
+	<%= erb :_item_controls, locals: {item: item} %>
+</div>

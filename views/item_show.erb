@@ -1,0 +1,21 @@
+<%= erb :_back_link %>
+
+<div class="item-show">
+
+<h1>
+	<%= @item.title %>
+</h1>
+
+<div class="item-important">
+	<%= @item.important %>
+</div>
+
+<div class="item-description">
+	<%= @item.description %>
+</div>
+
+<p class="item-edit-link">
+	<a href="/items/edit/<%= @item.id %>">Edit</a>
+</p>
+
+</div>
