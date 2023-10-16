@@ -2,10 +2,13 @@
 	Roadmaps
 </h1>
 
-<ul>
-	<% @roadmaps.each do |roadmap| %>
-	<li>
-		<%= roadmap.title %>
-	</li>
-	<% end %>
-</ul>
+<% @roadmaps.each do |roadmap| %>
+
+	<p>
+		<a href="/roadmaps/<%= roadmap.id %>">
+			<%= roadmap.title %>
+		</a>
+	</p>
+	
+<% end %>
+
