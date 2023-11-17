@@ -6,6 +6,8 @@ require './models/cycle.rb'
 require './models/item.rb'
 require './models/roadmap.rb'
 
+
+
 set :database, {adapter: "sqlite3", database: "app.sqlite3"}
 set :bind, "0.0.0.0"
 port = ENV["PORT"] || "8080"
@@ -22,10 +24,7 @@ end
 
 get '/roadmaps/new' do
 	roadmap = Roadmap.create title: "A roadmap"
-	now = Cycle.create(title: "Now", roadmap_id: roadmap.id)
-	Cycle.create(title: "Next", roadmap_id: roadmap.id)
-	Cycle.create(title: "Later", roadmap_id: roadmap.id)
-	Item.create(title: "Do something cool!", roadmap_id: roadmap.id, cycle_id: now.id, important: "A first thing on your roadmap")
+	roadmap.create_defaults
 	redirect to "roadmaps/#{roadmap.id}"
 end
 
@@ -44,6 +43,7 @@ end
 get '/roadmaps/:id' do
 	@roadmap = Roadmap.find params[:id]
 	@cycles = @roadmap.cycles
+	@roadmap.unstale
 	erb :roadmap_show
 end
 

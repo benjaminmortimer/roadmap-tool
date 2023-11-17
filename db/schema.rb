@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_05_020712) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_220354) do
   create_table "cycles", force: :cascade do |t|
     t.string "title"
     t.integer "roadmap_id"
+    t.string "start_date"
+    t.string "end_date"
     t.index ["roadmap_id"], name: "index_cycles_on_roadmap_id"
   end
 

@@ -1,7 +1,10 @@
 <div class="cycle">
-	<h2 class="cycle-title">
-		<%= cycle.title %>
-	</h2>
+	<div class="cycle-title-group">
+		<h2>
+			<%= cycle.title %>
+		</h2>
+		<%= erb :_cycle_dates, locals: {cycle: cycle} %>
+	</div>
 	<% cycle.items.each do |item| %>
 		<%= erb :_item, locals: {item: item} %>
 	<% end %>
