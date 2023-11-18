@@ -6,8 +6,6 @@ require './models/cycle.rb'
 require './models/item.rb'
 require './models/roadmap.rb'
 
-
-
 set :database, {adapter: "sqlite3", database: "app.sqlite3"}
 set :bind, "0.0.0.0"
 port = ENV["PORT"] || "8080"
@@ -15,6 +13,10 @@ set :port, port
 
 get '/' do
 	erb :index
+end
+
+get '/guff' do
+	erb :guff
 end
 
 get '/roadmaps' do

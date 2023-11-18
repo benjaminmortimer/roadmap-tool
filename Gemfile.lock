@@ -14,6 +14,8 @@ GEM
     concurrent-ruby (1.2.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    kramdown (2.4.0)
+      rexml
     minitest (5.20.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
@@ -24,6 +26,7 @@ GEM
     rack-protection (3.1.0)
       rack (~> 2.2, >= 2.2.4)
     rake (13.0.6)
+    rexml (3.2.6)
     ruby2_keywords (0.0.5)
     sinatra (3.1.0)
       mustermann (~> 3.0)
@@ -42,6 +45,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  kramdown
   puma
   rake
   sinatra

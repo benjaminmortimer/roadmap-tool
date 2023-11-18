@@ -10,6 +10,7 @@ RUN bundle install
 COPY . .
 
 RUN bundle exec rake db:migrate
+RUN bundle exec rake markdown:render_statement
 
 CMD ["ruby", "./app.rb"]
 

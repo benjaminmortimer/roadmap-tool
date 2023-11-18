@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'kramdown'
 gem 'puma'
 gem 'rake'
 gem 'sinatra'

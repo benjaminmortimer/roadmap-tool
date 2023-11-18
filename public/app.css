@@ -15,6 +15,25 @@ a:visited {
 	padding: 50px;
 }
 
+.longform_content_container {
+	max-width: 66%;
+	padding: 0 100px;
+
+}
+
+.longform_content_container p {
+	font-size: 1.1em;
+	line-height: 1.2;
+}
+
+.longform_content_container h2 {
+	margin-top: 50px;
+}
+
+.statement_summary {
+	margin-top: 50px;
+}
+
 .item {
 	border: 2px solid black;
 	padding: 10px;
